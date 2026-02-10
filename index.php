@@ -9,7 +9,7 @@ $user = getenv('DB_USERNAME');
 $pass = getenv('DB_PASSWORD');
 $dbname = getenv('DB_DATABASE');
 
-echo "<h1>LAMP Stack Test</h1>";
+echo "<h1>Web Systems II test</h1>";
 
 // 1. Check PHP version
 echo "<p><strong>PHP Version:</strong> " . phpversion() . "</p>";
@@ -33,4 +33,5 @@ try {
 
 // 3. Show Apache info
 echo "<p><strong>Server Software:</strong> " . $_SERVER['SERVER_SOFTWARE'] . "</p>";
+echo "<footer>Contributers: Aram A.</footer>"
 ?>
