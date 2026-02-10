@@ -20,6 +20,8 @@ try {
     $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        // This line is crucial for DigitalOcean Managed Databases:
+        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
     ];
     
     $pdo = new PDO($dsn, $user, $pass, $options);
