@@ -33,5 +33,5 @@ try {
 
 // 3. Show Apache info
 echo "<p><strong>Server Software:</strong> " . $_SERVER['SERVER_SOFTWARE'] . "</p>";
-echo "<footer>Contributers: Aram A.,Juan P.</footer>"
+echo "<footer>Contributers: Aram A.,Juan P,Hayden G.</footer>"
 ?>
