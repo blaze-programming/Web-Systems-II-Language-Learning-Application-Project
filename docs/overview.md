@@ -1,7 +1,7 @@
 # Executive Summary & Project Overview
 
 ## Project Goals and Objectives
-The primary goal is to develop a mobile-first client-server web application that serves as a low-barrier entry point for Japanese language learners. . Key objectives include:
+The primary goal is to develop a mobile-first client-server web application that serves as a low-barrier entry point for Japanese language learners. Key objectives include:
 
 -	Facilitate "Kana" Mastery: Provide interactive exercises for Hiragana and Katakana.
 - Build Foundation: Provide listening and grammar exercises to ground users in the basics of the language.
