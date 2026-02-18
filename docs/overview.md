@@ -1,11 +1,11 @@
 # Executive Summary & Project Overview
 
 ## Project Goals and Objectives
-This project aims to develop a language-learning application that teaches users step-by-step, from basic vocabulary to full sentences. Key objectives include:
+The primary goal is to develop a mobile-first client-server web application that serves as a low-barrier entry point for Japanese language learners. . Key objectives include:
 
-- A progression bar showing learning status
-- Compatibility with both mobile and web
-- Guided lesson structure for incremental learning
+-	Facilitate "Kana" Mastery: Provide interactive exercises for Hiragana and Katakana.
+- Build Foundation: Provide listening and grammar exercises to ground users in the basics of the language.
+- Prepare for Future Learning: Prepare users with the necessary fundamentals to transition into in-depth learning methods like immersion.
 
 ## Key Stakeholders and Roles
 **Juan Pellot — Support & Troubleshooting**
@@ -20,7 +20,6 @@ This project aims to develop a language-learning application that teaches users 
 ## Business Value & Expected Outcomes
 Users will finish able to hold basic conversations. Long-term business value includes the ability to:
 
-- Add multiple languages
 - Charge per-language access
 - Scale into a premium language platform
 
@@ -30,7 +29,7 @@ Users will finish able to hold basic conversations. Long-term business value inc
 | Planning Start | 1/24/2026 |
 | Development Start | 1/30/2026 |
 | Testing Start | 2/27/2026 |
-| Go-Live | 3/9/2026 |
+| Go-Live | 4/9/2026 |
 
 ## Critical Success Factors
 - Weekly documentation updates  
