@@ -8,13 +8,8 @@
 - No current budget for paid APIs
 - Must support both web and mobile users
 
-## Timeline Constraints
-- Development start: 1/30/2026
-- Go-live: 3/9/2026
-
 ## Resource Constraints
-- Two-person team
-- Limited testing resources
+- Three-person team
 
 ## Dependencies
 - Hosting environment availability
