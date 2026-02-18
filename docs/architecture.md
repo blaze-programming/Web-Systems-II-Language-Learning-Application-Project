@@ -2,10 +2,9 @@
 
 ## Client-Side Architecture
 - Browser and mobile-compatible
-- Modern UI framework (TBD: React, Vue, Flutter, etc.)
-- Responsive layout for desktop/tablet/mobile
-- Local storage for user progress caching
-- Device/browser support matrix
+- The application will use a browser based front end architecture utilizing HTML, CSS, and JavaScript
+- The application will be hosted using DigitalOcean’s PaaS service
+- The application will be using a LAMP (Linux, Apache, MySQL, and PHP) stack
 
 ## User Interface Specifications
 - Step-by-step guided lessons
