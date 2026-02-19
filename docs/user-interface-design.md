@@ -13,7 +13,7 @@ The following image depicts the desired appearance
 The application follows a structure to guide users to specific learning exercises
 
 ### User Flow Diagram
-<img width="3002" height="1423" alt="user experience flow chart" src="https://github.com/user-attachments/assets/7edf6777-6720-4aed-ba64-987172ef5a7e" />
+<img width="1994" height="990" alt="Screenshot 2026-02-19 030827" src="https://github.com/user-attachments/assets/bc4a3b08-2570-44b8-b734-021cbf7242ed" />
 
 ## User Interface Specifications by Screen
 Each page has its own user interface requirements
@@ -24,6 +24,11 @@ Examples of what the user interface should be like for each page:
 Where users can find the applications goals and begin their journey
 
 <img width="393" height="665" alt="home" src="https://github.com/user-attachments/assets/ea60c0cc-0b38-462f-968a-e7df53963df8" />
+
+### Profile
+Where users can see and edit their profile information, learning progress, and exercise settings
+
+<img width="393" height="665" alt="profile" src="https://github.com/user-attachments/assets/7848baad-39b3-49e2-a5d5-8c67e5002442" />
 
 ### Login
 Where the user can login to their account to save their progress
