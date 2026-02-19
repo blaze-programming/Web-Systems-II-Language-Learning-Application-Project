@@ -1,0 +1,256 @@
+/* --- Imports & Variables --- */
+:root {
+    --bg-color: #f4f4f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --primary-color: #28a6b4;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --disabled-color: #cccccc;
+    --border-color: #dddddd;
+    --focus-color: #aaaaaa;
+}
+
+body.dark-mode {
+    --bg-color: #0a1217;
+    --card-bg: #191c1d;
+    --text-color: #dbe3e6;
+    --primary-color: #1c7f95;
+    --success-color: #24c77e;
+    --error-color: #e64e6f;
+    --disabled-color: #282c2e;
+    --border-color: #586062;
+    --focus-color: #747f82;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* --- Header Styling --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    height: 60px;
+    align-items: center;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 5px;
+}
+
+.icon-btn svg {
+    width: 30px;
+    height: 30px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+/* --- Main Content Styling --- */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    overflow-y: auto;
+    align-items: center;
+}
+
+/* --- Side Menu Styling --- */
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 320px;
+    max-width: 90%;
+    height: 100dvh;
+    background-color: var(--card-bg);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+#side-menu.open {
+    right: 0;
+}
+
+.side-menu-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.side-menu-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Adapted from .setting-group */
+.side-menu-group {
+    margin-bottom: 25px;
+}
+
+.side-menu-group h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Adapted from .setting-item */
+.side-menu-toggle {
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Adapted from Sample 1 (.menu-link), using Sample 2 formatting */
+.side-menu-link {
+    display: block;
+    padding: 5px 10px;
+    color: inherit;
+    text-decoration: none;
+    /* border-bottom: 1px solid var(--border-color); */
+    transition: color 0.2s ease;
+}
+
+.side-menu-link:hover {
+    color: var(--primary-color);
+}
+
+/* Adapted from Sample 1, using Sample 2 focus color */
+.attribution-text {
+    font-size: 0.9em;
+    color: var(--focus-color);
+    margin-bottom: 10px;
+    padding: 10px 5px;
+}
+
+/* Merged sub-menu (smooth animation from Sample 1, formatting from Sample 2) */
+.sub-menu {
+    margin-left: 15px;
+    padding-left: 10px;
+    border-left: 2px solid var(--border-color);
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* Hide class for the JS toggle */
+.sub-menu.hidden {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Preserved from Sample 2 just in case you need it later */
+.delay-inputs label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.delay-inputs input {
+    width: 60px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2px;
+    color: var(--text-color);
+    text-align: right;
+}
+
+.delay-inputs small {
+    font-size: 0.7rem;
+    color: var(--focus-color);
+    display: block;
+    margin-top: 5px;
+}
+
+/* --- Overlay --- */
+#side-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+#side-menu-overlay.open {
+    display: block;
+}
+
+/* --- Toggle Switch --- */
+.toggle-container {
+    position: relative;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--focus-color);
+    border-radius: 20px;
+    transition: .4s;
+}
+
+.toggle-switch:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-switch {
+    background-color: var(--primary-color);
+}
+
+input:checked + .toggle-switch:before {
+    transform: translateX(20px);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
