@@ -107,7 +107,11 @@ Lesson illustrations
 Icons for UI elements
 
 ## Language and Coding 
-
+-MySQL 
+-Node.js
+-Java
+-HTML5
+-Git Hub
 
 
 
