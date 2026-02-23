@@ -6,10 +6,105 @@ The primary goal is to develop a mobile-first client-server web application that
 - Prepare for Future Learning: Prepare users with the necessary fundamentals to transition into in-depth learning methods like immersion.
 
 ## Stack Elements (LAMPS) 
--Linus (OS) 
-Primary Server environment
+1. Linux (Operating System Layer)
 
--
+Runs Apache, MySQL, and PHP
+
+Provides a stable environment for audio files, images, and lesson content
+
+Supports file uploads and media handling for language lessons
+
+2. Apache (Web Server Layer)
+
+Apache handles all HTTP requests and delivers pages to users.
+
+Role in the application:
+
+Delivers the web and mobile-responsive interface
+
+Processes requests to controllers through index.php
+
+Enables URL routing using .htaccess
+
+3. MySQL (Database Layer)
+
+MySQL stores all application data and is managed through Bluehost’s MySQL tools and phpMyAdmin.
+
+Data stored includes:
+
+User accounts
+
+Lesson content (Hiragana, Katakana, Kanji, vocabulary)
+
+Quiz questions and multiple-choice answers
+
+Flashcard decks
+
+User progress (scores, completed lessons, streaks)
+
+Key Features for This Project:
+
+Relational tables allow connecting lessons → quizzes → progress
+
+Uses PDO in PHP for secure database access
+
+4. PHP (Server-Side Language Layer)
+
+PHP acts as the core logic engine behind the application.
+
+Used for:
+
+Loading lessons dynamically
+
+Serving quiz questions
+
+Generating flashcards
+
+Handling login and registration
+
+Saving and retrieving user progress
+
+Sending JSON data to the mobile-style front end
+
+Connectors to other STACK elements:
+
+Uses PDO to connect to MySQL
+
+Runs within Apache
+
+5. Front-End Technologies (Client Layer)
+
+HTML5
+
+Creates the structure for lesson pages, flashcards, and quiz screens.
+
+CSS3 / Bootstrap
+
+Handles responsive layout so the app works on mobile devices (BlueOcean supports mobile-friendly previews).
+
+JavaScript / jQuery
+
+Used for:
+
+Flashcard flipping animations
+
+Interactive quizzes
+
+Audio playback for pronunciation
+
+Updating progress without page reloads (AJAX)
+
+6. Data Storage & Media Files
+
+The application includes custom media for Japanese study.
+
+Stored in /assets/audio and /assets/images, including:
+
+Audio pronunciations
+
+Lesson illustrations
+
+Icons for UI elements
 
 ## Language and Coding 
 
@@ -179,48 +274,46 @@ Where users can train their listening ability through exercies
     README.md
 
 ## Platform and hosting information
--Server Environment
+Server Environment
 
-Linux-based shared hosting
+-Linux-based shared hosting
 
-Apache 2.4+ (managed by Bluehost)
+-Apache 2.4+ (managed by Bluehost)
 
-PHP 8.x with common extensions
+-PHP 8.x with common extensions
 
-MySQL / MariaDB database system
+-MySQL / MariaDB database system
 
-phpMyAdmin for database administration
+-phpMyAdmin for database administration
 
-HTTPS / SSL provided automatically
+-HTTPS / SSL provided automatically
 
-Deployment Process
+-Deployment Process
 
 All project files are uploaded to the /public_html/ directory using:
 
-Bluehost File Manager
+-Bluehost File Manager
 
-No manual installation of Apache/PHP/MySQL is required
+-No manual installation of Apache/PHP/MySQL is required
 
-Database Setup
+-Database Setup
 
-Databases and users are created through Bluehost → Advanced → MySQL Databases
+-Databases and users are created through Bluehost → Advanced → MySQL Databases
 
-SQL schema is imported through phpMyAdmin
+-SQL schema is imported through phpMyAdmin
 
-PHP connects to the database using the standard MySQL hostname localhost
-
-Continuity
+-PHP connects to the database using the standard MySQL hostname localhost
 
 Any developer can continue this project by:
 
-Downloading or cloning the GitHub repository
+-Downloading or cloning the GitHub repository
 
-Uploading files to (https://github.com/blaze-programming/Web-Systems-II-Language-Learning-Application-Project)
+-Uploading files to (https://github.com/blaze-programming/Web-Systems-II-Language-Learning-Application-Project)
 
-Creating a MySQL database in cPanel
+-Creating a MySQL database in cPanel
 
-Importing schema.sql
+-Importing schema.sql
 
-Updating /app/config/database.php with Bluehost credentials
+-Updating /app/config/database.php with Bluehost credentials
 
-Running the application through the hosted domain Blue Ocean
+-Running the application through the hosted domain Blue Ocean
