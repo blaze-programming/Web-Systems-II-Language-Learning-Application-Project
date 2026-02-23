@@ -100,8 +100,126 @@ Where users can train their listening ability through exercies
 
 ## Code modules and object overview
 
+/(https://web-systems-application-uf3mf.ondigitalocean.app/)
+    index.php
 
--
+        /config
+            database.php
+            app_settings.php
+
+        /controllers
+            AuthController.php
+            LessonsController.php
+            QuizController.php
+            FlashcardController.php
+            ProgressController.php
+            DashboardController.php
+
+        /models
+            User.php
+            Lesson.php
+            Quiz.php
+            Flashcard.php
+            Progress.php
+
+        /views
+            /partials
+                header.php
+                footer.php
+                navbar.php
+
+            /auth
+                login.php
+                register.php
+
+            /dashboard
+                index.php
+
+            /lessons
+                list.php
+                view.php
+
+            /quiz
+                start.php
+                question.php
+                results.php
+
+            /flashcards
+                index.php
+
+    /assets
+        /css
+            style.css
+            theme.css
+
+        /js
+            main.js
+            lessons.js
+            quiz.js
+            flashcards.js
+
+        /images
+            logo.png
+            icons/
+            lesson_images/
+
+        /audio
+            hiragana/
+            katakana/
+            vocabulary/
+
+    /api
+        lessons.php
+        flashcards.php
+        quiz.php
+        progress.php
+
+    .htaccess
+    README.md
 
 ## Platform and hosting information
--
+-Server Environment
+
+Linux-based shared hosting
+
+Apache 2.4+ (managed by Bluehost)
+
+PHP 8.x with common extensions
+
+MySQL / MariaDB database system
+
+phpMyAdmin for database administration
+
+HTTPS / SSL provided automatically
+
+Deployment Process
+
+All project files are uploaded to the /public_html/ directory using:
+
+Bluehost File Manager
+
+No manual installation of Apache/PHP/MySQL is required
+
+Database Setup
+
+Databases and users are created through Bluehost → Advanced → MySQL Databases
+
+SQL schema is imported through phpMyAdmin
+
+PHP connects to the database using the standard MySQL hostname localhost
+
+Continuity
+
+Any developer can continue this project by:
+
+Downloading or cloning the GitHub repository
+
+Uploading files to (https://github.com/blaze-programming/Web-Systems-II-Language-Learning-Application-Project)
+
+Creating a MySQL database in cPanel
+
+Importing schema.sql
+
+Updating /app/config/database.php with Bluehost credentials
+
+Running the application through the hosted domain Blue Ocean
