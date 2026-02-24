@@ -68,11 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["kana_level"])) {
 
     </form>
 
-    <div class="back-home">
-        <a href="home.php" class="side-menu-link">
-            ← Back to Home
-        </a>
-    </div>
 
 </main>
 
@@ -81,3 +76,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["kana_level"])) {
 <script src="global-scripts.js"></script>
 </body>
 </html>
+
