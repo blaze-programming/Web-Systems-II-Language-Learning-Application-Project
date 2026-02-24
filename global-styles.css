@@ -290,3 +290,42 @@ input[type="checkbox"] {
 .level-card:active {
     transform: scale(0.98);
 }
+/* Kana Level Page */
+
+.kana-level-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.kana-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+.kana-level-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.kana-card {
+    background: transparent;
+    border: 2px solid #ffffff;
+    padding: 30px 20px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kana-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #ffffff;
+}
+
+.kana-card:active {
+    transform: scale(0.98);
+}
