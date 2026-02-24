@@ -253,4 +253,40 @@ input:checked + .toggle-switch:before {
 
 input[type="checkbox"] {
     display: none;
+
+}
+.page-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.level-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.level-card {
+    background: transparent;
+    border: 2px solid #ffffff;
+    padding: 30px 20px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.level-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.level-card:active {
+    transform: scale(0.98);
 }
