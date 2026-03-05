@@ -1,3 +1,4 @@
+<?php require_once 'auth.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,4 +24,5 @@
 
     <script src="global-scripts.js"></script>
 </body>
+
 </html>
