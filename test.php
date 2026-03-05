@@ -191,6 +191,11 @@
 </head>
 <body>
     <div class="container">
+        <?php 
+            $pageTitle = "What is Kana";
+            include 'menu-bar.php'; 
+        ?>
+<!--
         <div class="header">
             <div class="settings-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -200,7 +205,7 @@
             </div>
             <h1>What is kana</h1>
         </div>
-
+-->
         <!-- VIDEO CONTAINER - Modify the videoUrl below to add your external video link -->
         <a href="https://www.youtube.com/embed/YOUR_VIDEO_ID" class="video-container" id="videoLink">
             <div class="video-content">
@@ -256,3 +261,4 @@
 </body>
 
 </html>
+
