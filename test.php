@@ -251,20 +251,8 @@
         }
 
         // Call the function on page load
-        embedVideo();
-
-        // Alternative: If you want to click to load the video (lazy loading)
-        // Uncomment the code below and comment out embedVideo() above
-        /*
-        videoLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (!videoLink.querySelector('iframe')) {
-                embedVideo();
-            } else {
-                videoLink.querySelector('iframe').requestFullscreen();
-            }
-        });
-        */
+        embedVideo()
     </script>
 </body>
+
 </html>
