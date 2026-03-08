@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is Kana</title>
+    <link rel="stylesheet" href="global-styles.css">
     <style>
         * {
             margin: 0;
@@ -261,4 +262,5 @@
 </body>
 
 </html>
+
 
