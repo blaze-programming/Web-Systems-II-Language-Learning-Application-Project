@@ -3,12 +3,12 @@
 // Load Composer dependencies (PHPAuth and others)
 require_once __DIR__ . '/vendor/autoload.php';
 
-// Get database credentials from DigitalOcean environment variables
-$host = getenv('DB_HOST');
-$port = getenv('DB_PORT');
-$user = getenv('DB_USERNAME');
-$pass = getenv('DB_PASSWORD');
-$dbname = getenv('DB_DATABASE');
+// Use DigitalOcean variables if they exist, otherwise use local XAMPP defaults
+$host = getenv('DB_HOST') ?: 'localhost';
+$port = getenv('DB_PORT') ?: '3306';
+$user = getenv('DB_USERNAME') ?: 'root';
+$pass = getenv('DB_PASSWORD') ?: '';
+$dbname = getenv('DB_DATABASE') ?: 'language_app';
 
 try {
 
