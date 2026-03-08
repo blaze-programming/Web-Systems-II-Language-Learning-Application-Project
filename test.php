@@ -195,7 +195,18 @@
         <?php 
             $pageTitle = "What is Kana";
             include 'menu-bar.php'; 
+$host = getenv('DB_HOST');
+$port = getenv('DB_PORT');
+$user = getenv('DB_USERNAME');
+$pass = getenv('DB_PASSWORD');
+$dbname = getenv('DB_DATABASE');
+echo $host;
+echo $port;
+echo $user;
+echo $pass;
+echo $dbname;
         ?>
+
 <!--
         <div class="header">
             <div class="settings-icon">
@@ -262,5 +273,6 @@
 </body>
 
 </html>
+
 
 
