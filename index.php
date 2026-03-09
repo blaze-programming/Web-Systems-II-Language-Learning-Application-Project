@@ -81,7 +81,7 @@ try {
             $safeMessage = htmlspecialchars($row['message']);
             $date = date('F j, Y, g:i a', strtotime($row['created_at']));
             
-            echo "<li><strong>{$safeName}</strong> said: <em>\"{$safeMessage}\"</em> <br><small>(Submitted: {$date})</small></li><br>";
+            echo "<li><strong>{$safeName}</strong> said: <em>\"{$safeMessage}\"</em> <br><small>(Submitted: {$date} UTC)</small></li><br>";
         }
         echo "</ul>";
     } else {
