@@ -1,4 +1,4 @@
-
+<?php require_once 'auth.php'; ?>
 
 <?php
 // DigitalOcean App Platform injects DB credentials automatically 
