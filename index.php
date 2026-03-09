@@ -1,5 +1,3 @@
-<?php require_once 'auth.php'; ?>
-
 <?php
 // DigitalOcean App Platform injects DB credentials automatically 
 // if you've added a database component to your app.
@@ -18,18 +16,22 @@ echo "<p><strong>PHP Version:</strong> " . phpversion() . "</p>";
 
 // 2. Try Database Connection
 try {
-
-    // Instead of creating a new connection, we just verify the one from auth.php
-    if ($pdo) {
-        echo "<p style='color: green;'>✅ Successfully connected to the Managed MySQL Database!</p>";
-    }
-
+    $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4";
+    $options = [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        // This line is crucial for DigitalOcean Managed Databases:
+        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
+    ];
+    
+    $pdo = new PDO($dsn, $user, $pass, $options);
+    
+    echo "<p style='color: green;'>✅ Successfully connected to the Managed MySQL Database!</p>";
 } catch (\PDOException $e) {
     echo "<p style='color: red;'>❌ Database Connection Failed: " . $e->getMessage() . "</p>";
 }
 
 // 3. Show Apache info
 echo "<p><strong>Server Software:</strong> " . $_SERVER['SERVER_SOFTWARE'] . "</p>";
-
-echo "<footer>Contributers: Aram A.,Juan P,Hayden G.</footer>";
+echo "<footer>Contributers: Aram A.,Juan P,Hayden G.</footer>"
 ?>
