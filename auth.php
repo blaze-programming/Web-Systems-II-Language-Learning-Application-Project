@@ -1,7 +1,7 @@
 <?php
 
 // Load Composer dependencies (PHPAuth and others)
-require_once __DIR__ . '/vendor/autoload.php';
+// require_once __DIR__ . '/vendor/autoload.php';
 
 // Use DigitalOcean variables if they exist, otherwise use local XAMPP defaults
 $host = getenv('DB_HOST') ?: 'localhost';
@@ -36,3 +36,4 @@ $config = new PHPAuth\Config($pdo);
 $auth = new PHPAuth\Auth($pdo, $config);
 
 ?>
+
