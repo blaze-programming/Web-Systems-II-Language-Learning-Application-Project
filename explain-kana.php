@@ -6,12 +6,6 @@
     <title>What is Kana</title>
     <link rel="stylesheet" href="global-styles.css">
     <style>
-
-        .container {
-            width: 100%;
-            max-width: 900px;
-        }
-
         .video-container {
             border: 4px solid #ffffff;
             aspect-ratio: 16 / 9;
@@ -93,10 +87,6 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-                margin-bottom: 50px;
-            }
 
             .video-container {
                 margin-bottom: 50px;
@@ -120,17 +110,6 @@
 
             .explanation {
                 font-size: 1.5rem;
-            }
-
-            .settings-icon {
-                width: 40px;
-                height: 40px;
-                top: -30px;
-            }
-
-            .settings-icon svg {
-                width: 22px;
-                height: 22px;
             }
         }
     </style>
