@@ -6,65 +6,10 @@
     <title>What is Kana</title>
     <link rel="stylesheet" href="global-styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            padding: 20px;
-        }
 
         .container {
             width: 100%;
             max-width: 900px;
-        }
-
-        .header {
-            position: relative;
-            margin-bottom: 60px;
-        }
-
-        .settings-icon {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            width: 50px;
-            height: 50px;
-            border: 2px solid #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .settings-icon:hover {
-            transform: rotate(20deg);
-        }
-
-        .settings-icon svg {
-            width: 28px;
-            height: 28px;
-            stroke: white;
-            fill: none;
-        }
-
-        h1 {
-            color: #ffffff;
-            font-size: 4rem;
-            font-weight: 300;
-            text-align: center;
-            margin-bottom: 80px;
-            letter-spacing: 2px;
         }
 
         .video-container {
@@ -195,16 +140,6 @@
         <?php 
             $pageTitle = "What is Kana";
             include 'menu-bar.php'; 
-$host = getenv('DB_HOST');
-$port = getenv('DB_PORT');
-$user = getenv('DB_USERNAME');
-$pass = getenv('DB_PASSWORD');
-$dbname = getenv('DB_DATABASE');
-echo $host;
-echo $port;
-echo $user;
-echo $pass;
-echo $dbname;
         ?>
 
 <!--
