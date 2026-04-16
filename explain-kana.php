@@ -114,7 +114,7 @@
         }
     </style>
 </head>
-<body>
+<body class="dark-mode">
     <div class="container">
         <?php 
             $pageTitle = "What is Kana";
