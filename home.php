@@ -1,3 +1,11 @@
+<?php
+require 'auth.php';
+
+if (!$auth->isLogged()) {
+    header('Location: login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
