@@ -6,7 +6,7 @@ if (!$auth->isLogged()) {
     exit();
 }
 
-// ✅ Get current user from session
+// Get current user from session
 $user = $auth->getUser($_COOKIE['phpauth_session_cookie']);
 ?>
 <!DOCTYPE html>
@@ -26,8 +26,10 @@ $user = $auth->getUser($_COOKIE['phpauth_session_cookie']);
 
     <main>
 
-        <!-- ✅ Example of using the user -->
         <h2>Welcome, <?= htmlspecialchars($user['email']) ?>!</h2>
+
+        <!-- added line -->
+        <p>Logged in as: <?= htmlspecialchars($user['email']) ?></p>
 
     </main>
 
