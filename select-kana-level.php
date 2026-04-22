@@ -59,6 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["kana_level"])) {
         Choose your starting point
     </h1>
 
+    <p>Logged in as: <?= htmlspecialchars($user['email']) ?></p>
+
     <form method="POST" class="kana-level-form">
 
         <button type="submit" name="kana_level" value="beginner" class="kana-card">
