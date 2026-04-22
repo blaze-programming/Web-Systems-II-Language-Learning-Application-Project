@@ -5,6 +5,9 @@ if (!$auth->isLogged()) {
     header('Location: login.php');
     exit();
 }
+
+//  
+$user = $auth->getUser($_COOKIE['phpauth_session_cookie']);
 ?>
 <?php
 
