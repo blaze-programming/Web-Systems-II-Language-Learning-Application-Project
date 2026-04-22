@@ -34,27 +34,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Language Learning App</title>
+    <link rel="stylesheet" href="global-styles.css">
 </head>
-<body>
-    <h2>Login</h2>
-    <?= $message ?>
-    <form method="POST" action="login.php">
-        <div>
-            <label>Email:</label><br>
-            <input type="email" name="email" required>
-        </div>
-        <div>
-            <label>Password:</label><br>
-            <input type="password" name="password" required>
-        </div>
-        <div>
-            <input type="checkbox" name="remember" id="remember">
-            <label for="remember">Remember Me</label>
-        </div>
-        <br>
-        <button type="submit">Log In</button>
-    </form>
-    <p>Don't have an account? <a href="register.php">Register here</a>.</p>
+
+<body class="dark-mode">
+
+<?php 
+$pageTitle = "Login";
+include 'menu-bar.php';
+?>
+
+<main>
+
+<h2>Login</h2>
+
+<?= $message ?>
+
+<form method="POST" action="login.php">
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <input type="checkbox" name="remember" id="remember">
+    <label for="remember">Remember Me</label><br><br>
+
+    <button type="submit">Log In</button>
+
+</form>
+
+<p>Don't have an account? <a href="register.php">Register here</a>.</p>
+
+</main>
+
+<script src="global-scripts.js"></script>
+
 </body>
 </html>
