@@ -1,4 +1,12 @@
 <?php
+require 'auth.php';
+
+if (!$auth->isLogged()) {
+    header('Location: login.php');
+    exit();
+}
+?>
+<?php
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["kana_level"])) {
 
