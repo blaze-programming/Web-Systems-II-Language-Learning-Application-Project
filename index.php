@@ -1,4 +1,7 @@
 <?php
+
+header('Location: home.php');
+
 // DigitalOcean App Platform injects DB credentials automatically 
 $host = '127.0.0.1'; //getenv('DB_HOST');
 $port = '3306';//getenv('DB_PORT');
