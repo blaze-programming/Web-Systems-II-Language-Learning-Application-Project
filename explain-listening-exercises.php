@@ -27,7 +27,7 @@ include 'menu-bar.php';
         <h2 class="page-heading">How the Exercises Work</h2>
 
         <p class="page-subtext">
-            When you hear people speak other languages, it is very hard to lock onto what they are actually saying when you are not accustomed to the sound of the language. It is for this reason that many new learners can hear a native speaker say something that should be recognizable, but isn't. These exercises challenge you to listen to simple sentences and phrases and to just type the sounds you hear, not worrying about the meaning or the correct characters
+            When you hear people speak other languages, it is very hard to lock onto what they are actually saying when you are not accustomed to the sound of the language. It is for this reason that many new learners can hear a native speaker say something that should be recognizable, but isn't. These exercises challenge you to listen to simple sentences and phrases and to just type the sounds you hear, not worrying about the meaning or the correct characters.
         </p>
 
         <a href="listening-home.php" class="btn btn-primary">Let's Go →</a>

@@ -63,7 +63,7 @@ include 'menu-bar.php';
     <div class="page-content">
 
         <h2 class="page-heading">Are you familiar with Kana?</h2>
-        <p class="page-subtext">Kana is the Japanese phonetic alphabet, consisting of Hiragana and Katakana.</p>
+        <p class="page-subtext">Kana is the Japanese phonetic alphabet, consisting of hiragana and katakana.</p>
 
         <form method="POST" style="display:flex;flex-direction:column;gap:16px;">
             <button type="submit" name="kana_level" value="no" class="btn btn-outline">

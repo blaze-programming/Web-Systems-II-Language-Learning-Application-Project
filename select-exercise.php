@@ -57,7 +57,7 @@ include 'menu-bar.php';
                 <button class="info-icon-btn" data-tooltip="listening-info" aria-label="Info about Listening">i</button>
             </div>
             <div class="info-tooltip" id="listening-info">
-                Learn to identify the different sounds in Japanese by listening to real phrases (You should have a decent understanding of kana for these exercises)
+                Learn to identify the different sounds in Japanese by listening to real phrases. (You should have a decent understanding of kana for these exercises.)
             </div>
 
         </div>
