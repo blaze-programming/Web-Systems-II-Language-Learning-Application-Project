@@ -1,3 +1,14 @@
+# Secret files
 .env
+.env.local
 
+# Dependencies
 vendor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files (optional but helpful)
+.vscode/
+.idea/
