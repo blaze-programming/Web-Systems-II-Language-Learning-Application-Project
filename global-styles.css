@@ -9,6 +9,7 @@
     --disabled-color: #cccccc;
     --border-color: #dddddd;
     --focus-color: #aaaaaa;
+    --btn-text: #ffffff;
 }
 
 body.dark-mode {
@@ -21,6 +22,7 @@ body.dark-mode {
     --disabled-color: #282c2e;
     --border-color: #586062;
     --focus-color: #747f82;
+    --btn-text: #ffffff;
 }
 
 * {
@@ -46,6 +48,7 @@ header {
     padding: 15px;
     height: 60px;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .icon-btn {
@@ -62,7 +65,7 @@ header {
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: var(--text-color);
 }
 
@@ -74,6 +77,392 @@ main {
     padding: 10px 20px;
     overflow-y: auto;
     align-items: center;
+}
+
+/* --- General Page Content Container --- */
+.page-content {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.page-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.page-subtext {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--focus-color);
+    line-height: 1.6;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+    color: var(--btn-text);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    opacity: 0.88;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+}
+
+.btn-success:hover {
+    opacity: 0.88;
+}
+
+.btn-danger {
+    background-color: var(--error-color);
+}
+
+.btn-danger:hover {
+    opacity: 0.88;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-sm {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    width: auto;
+}
+
+/* --- Forms --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* --- Messages --- */
+.error-msg {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--error-color);
+    border-radius: 6px;
+    background-color: rgba(231, 76, 60, 0.08);
+}
+
+.success-msg {
+    color: var(--success-color);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--success-color);
+    border-radius: 6px;
+    background-color: rgba(46, 204, 113, 0.08);
+}
+
+/* --- Tabs --- */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    gap: 0;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--focus-color);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-panel {
+    display: none;
+    padding-top: 20px;
+}
+
+.tab-panel.active {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- Progress Bar --- */
+.progress-bar-wrap {
+    width: 100%;
+    height: 8px;
+    background-color: var(--disabled-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* --- Info Icon & Tooltip --- */
+.exercise-btn-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.exercise-btn-row .btn {
+    flex: 1;
+}
+
+.info-icon-btn {
+    background: none;
+    border: 2px solid var(--border-color);
+    color: var(--focus-color);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.info-icon-btn:hover, .info-icon-btn.active {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.info-tooltip {
+    display: none;
+    padding: 10px 14px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--focus-color);
+    line-height: 1.5;
+}
+
+.info-tooltip.visible {
+    display: block;
+}
+
+/* --- Kana Grid --- */
+.kana-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 10px 0 6px;
+}
+
+.kana-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    width: 100%;
+}
+
+.kana-cell {
+    position: relative;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 6px 4px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70px;
+}
+
+.kana-romaji {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-size: 0.55rem;
+    color: var(--focus-color);
+    line-height: 1;
+}
+
+.kana-char {
+    font-size: 1.4rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kana-cell-progress {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    height: 4px;
+    background-color: var(--disabled-color);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.kana-cell-progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* --- Exercise Page --- */
+.exercise-prompt {
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+    font-weight: 300;
+}
+
+.exercise-prompt-label {
+    font-size: 0.85rem;
+    text-align: center;
+    color: var(--focus-color);
+    margin-bottom: 4px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.option-btn {
+    padding: 18px 10px;
+    font-size: 1.4rem;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background-color 0.2s, border-color 0.2s;
+    text-align: center;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: var(--primary-color);
+}
+
+.option-btn.correct {
+    background-color: rgba(46, 204, 113, 0.18);
+    border-color: var(--success-color);
+    color: var(--success-color);
+}
+
+.option-btn.wrong {
+    background-color: rgba(231, 76, 60, 0.18);
+    border-color: var(--error-color);
+    color: var(--error-color);
+}
+
+.option-btn:disabled {
+    cursor: default;
+}
+
+/* --- Listening Exercise --- */
+.speaker-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: opacity 0.2s;
+}
+
+.speaker-btn:hover {
+    opacity: 0.85;
+}
+
+.speaker-btn svg {
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    stroke: #ffffff;
+}
+
+/* --- Card / Section Box --- */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
 }
 
 /* --- Side Menu Styling --- */
@@ -99,8 +488,22 @@ main {
 .side-menu-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     border-bottom: 1px solid var(--border-color);
+}
+
+.side-menu-header h2 {
+    font-size: 1.1rem;
+}
+
+.side-menu-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    line-height: 1;
 }
 
 .side-menu-content {
@@ -109,19 +512,18 @@ main {
     padding: 20px;
 }
 
-/* Adapted from .setting-group */
 .side-menu-group {
     margin-bottom: 25px;
 }
 
 .side-menu-group h3 {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--primary-color);
     margin-bottom: 10px;
 }
 
-/* Adapted from .setting-item */
 .side-menu-toggle {
     padding-left: 10px;
     display: flex;
@@ -130,29 +532,28 @@ main {
     margin-bottom: 12px;
 }
 
-/* Adapted from Sample 1 (.menu-link), using Sample 2 formatting */
 .side-menu-link {
     display: block;
-    padding: 5px 10px;
+    padding: 7px 10px;
     color: inherit;
     text-decoration: none;
-    /* border-bottom: 1px solid var(--border-color); */
-    transition: color 0.2s ease;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .side-menu-link:hover {
+    background-color: rgba(28, 127, 149, 0.1);
     color: var(--primary-color);
 }
 
-/* Adapted from Sample 1, using Sample 2 focus color */
 .attribution-text {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: var(--focus-color);
-    margin-bottom: 10px;
-    padding: 10px 5px;
+    padding: 6px 10px;
+    line-height: 1.6;
 }
 
-/* Merged sub-menu (smooth animation from Sample 1, formatting from Sample 2) */
 .sub-menu {
     margin-left: 15px;
     padding-left: 10px;
@@ -163,37 +564,12 @@ main {
     opacity: 1;
 }
 
-/* Hide class for the JS toggle */
 .sub-menu.hidden {
     max-height: 0;
     opacity: 0;
     pointer-events: none;
     margin-top: 0;
     margin-bottom: 0;
-}
-
-/* Preserved from Sample 2 just in case you need it later */
-.delay-inputs label {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
-
-.delay-inputs input {
-    width: 60px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 2px;
-    color: var(--text-color);
-    text-align: right;
-}
-
-.delay-inputs small {
-    font-size: 0.7rem;
-    color: var(--focus-color);
-    display: block;
-    margin-top: 5px;
 }
 
 /* --- Overlay --- */
@@ -253,77 +629,49 @@ input:checked + .toggle-switch:before {
 
 input[type="checkbox"] {
     display: none;
-
 }
+
+/* --- Legacy / Compat --- */
 .page-container {
-    max-width: 600px;
-    margin: 80px auto;
-    padding: 20px;
+    max-width: 480px;
+    width: 100%;
+    padding: 20px 0;
     text-align: center;
 }
 
-.page-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.level-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.level-card {
-    background: transparent;
-    border: 2px solid #ffffff;
-    padding: 30px 20px;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.level-card:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.level-card:active {
-    transform: scale(0.98);
-}
-/* Kana Level Page */
-
 .kana-level-container {
-    max-width: 600px;
-    margin: 80px auto;
-    padding: 20px;
+    max-width: 480px;
+    width: 100%;
+    padding: 20px 0;
     text-align: center;
 }
 
 .kana-title {
-    font-size: 2rem;
-    margin-bottom: 50px;
-    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
 }
 
 .kana-level-form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 16px;
 }
 
 .kana-card {
     background: transparent;
-    border: 2px solid #ffffff;
-    padding: 30px 20px;
-    font-size: 1.5rem;
-    color: #ffffff;
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    font-size: 1.1rem;
+    color: var(--text-color);
     cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
 .kana-card:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: #ffffff;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .kana-card:active {

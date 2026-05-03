@@ -2,7 +2,7 @@
 // login.php
 require 'auth.php';
 
-$message = '';
+$error = '';
 
 // Redirect if already logged in
 if ($auth->isLogged()) {
@@ -11,67 +11,73 @@ if ($auth->isLogged()) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $remember = isset($_POST['remember']) ? true : false;
+    $email    = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $remember = isset($_POST['remember']);
 
-    // PHPAuth login function
     $result = $auth->login($email, $password, $remember);
 
     if ($result['error']) {
-        $message = "<div style='color: red;'>{$result['message']}</div>";
+        $error = $result['message'];
     } else {
-        // Set the authentication cookie
-        //setcookie($config->cookie_name, $result['hash'], $result['expire'], $config->cookie_path, $config->cookie_domain, $config->cookie_secure, $config->cookie_http);
-        
-        header('Location: home.php');
+        header('Location: select-exercise.php');
         exit();
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Language Learning App</title>
+    <title>Login - Japanese Kickstart</title>
     <link rel="stylesheet" href="global-styles.css">
 </head>
-
 <body class="dark-mode">
 
-<?php 
+<?php
 $pageTitle = "Login";
 include 'menu-bar.php';
 ?>
 
 <main>
+    <div class="page-content">
 
-<h2>Login</h2>
+        <h2 class="page-heading">Welcome back</h2>
 
-<?= $message ?>
+        <?php if ($error): ?>
+            <div class="error-msg"><?= htmlspecialchars($error) ?></div>
+        <?php endif; ?>
 
-<form method="POST" action="login.php">
+        <form method="POST" action="login.php" style="display:flex;flex-direction:column;gap:16px;">
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" type="email" id="email" name="email" required
+                       value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
+            </div>
 
-    <label>Password:</label><br>
-    <input type="password" name="password" required><br><br>
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-input" type="password" id="password" name="password" required>
+            </div>
 
-    <input type="checkbox" name="remember" id="remember">
-    <label for="remember">Remember Me</label><br><br>
+            <div style="display:flex;align-items:center;gap:8px;">
+                <input type="checkbox" id="remember" name="remember" style="display:inline-block;width:auto;">
+                <label for="remember" style="font-size:0.9rem;">Remember me</label>
+            </div>
 
-    <button type="submit">Log In</button>
+            <button type="submit" class="btn btn-primary">Log In</button>
 
-</form>
+        </form>
 
-<p>Don't have an account? <a href="register.php">Register here</a>.</p>
+        <button class="btn btn-outline" onclick="window.location.href='register.php'">
+            Create an Account
+        </button>
 
+    </div>
 </main>
 
 <script src="global-scripts.js"></script>
-
 </body>
 </html>
