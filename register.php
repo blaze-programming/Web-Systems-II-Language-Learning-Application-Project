@@ -1,11 +1,11 @@
 <?php
-
+// register.php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-// register.php
 require 'auth.php';
 
-$message = '';
+$error   = '';
+$success = '';
 
 // Redirect if already logged in
 if ($auth->isLogged()) {
@@ -14,45 +14,76 @@ if ($auth->isLogged()) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $password_repeat = $_POST['password_repeat'];
+    $email           = $_POST['email'] ?? '';
+    $password        = $_POST['password'] ?? '';
+    $password_repeat = $_POST['password_repeat'] ?? '';
 
-    // PHPAuth register function
     $result = $auth->register($email, $password, $password_repeat);
 
     if ($result['error']) {
-        $message = "<div style='color: red;'>{$result['message']}</div>";
+        $error = $result['message'];
     } else {
-        $message = "<div style='color: green;'>Registration successful! You can now <a href='login.php'>log in</a>.</div>";
+        $success = 'Registration successful! You can now log in.';
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register - Language Learning App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Japanese Kickstart</title>
+    <link rel="stylesheet" href="global-styles.css">
 </head>
-<body>
-    <h2>Create an Account</h2>
-    <?= $message ?>
-    <form method="POST" action="register.php">
-        <div>
-            <label>Email:</label><br>
-            <input type="email" name="email" required>
-        </div>
-        <div>
-            <label>Password:</label><br>
-            <input type="password" name="password" required>
-        </div>
-        <div>
-            <label>Repeat Password:</label><br>
-            <input type="password" name="password_repeat" required>
-        </div>
-        <br>
-        <button type="submit">Register</button>
-    </form>
+<body class="dark-mode">
+
+<?php
+$pageTitle = "Create Account";
+include 'menu-bar.php';
+?>
+
+<main>
+    <div class="page-content">
+
+        <h2 class="page-heading">Create an Account</h2>
+
+        <?php if ($error): ?>
+            <div class="error-msg"><?= htmlspecialchars($error) ?></div>
+        <?php endif; ?>
+
+        <?php if ($success): ?>
+            <div class="success-msg"><?= htmlspecialchars($success) ?></div>
+        <?php endif; ?>
+
+        <form method="POST" action="register.php" style="display:flex;flex-direction:column;gap:16px;">
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" type="email" id="email" name="email" required
+                       value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-input" type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password_repeat">Confirm Password</label>
+                <input class="form-input" type="password" id="password_repeat" name="password_repeat" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+
+        </form>
+
+        <button class="btn btn-outline" onclick="window.location.href='login.php'">
+            Already have an account? Log In
+        </button>
+
+    </div>
+</main>
+
+<script src="global-scripts.js"></script>
 </body>
 </html>

@@ -6,84 +6,76 @@ if (!$auth->isLogged()) {
     exit();
 }
 
-//  
-$user = $auth->getUser($_COOKIE['phpauth_session_cookie']);
-?>
-<?php
+$user = $auth->getUser($_COOKIE[$config->cookie_name]);
+$uid  = $user['uid'];
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["kana_level"])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['kana_level'])) {
+    $level = $_POST['kana_level'];
 
-    $_SESSION["kana_level"] = $_POST["kana_level"];
+    // Fetch all kana IDs
+    $kanaRows = $dbh->query('SELECT id FROM kana')->fetchAll(PDO::FETCH_COLUMN);
 
-    switch ($_POST["kana_level"]) {
-        case "beginner":
-            header("Location: explain-kana.php");
-            break;
+    // Clear existing progress for this user
+    $dbh->prepare('DELETE FROM user_kana_progress WHERE user_fk = ?')->execute([$uid]);
 
-        case "intermediate":
-            header("Location: determine-kana-knowledge.php");
-            break;
-
-        case "expert":
-            header("Location: kana-learning-home.php");
-            break;
-
-        default:
-            header("Location: home.php");
-            break;
+    if ($level === 'no') {
+        // Beginner: progress 0, no last_time_encountered
+        $stmt = $dbh->prepare(
+            'INSERT INTO user_kana_progress (user_fk, kana_fk, kana_type, progress, last_time_encountered)
+             VALUES (?, ?, ?, 0, NULL)'
+        );
+        foreach ($kanaRows as $kanaId) {
+            $stmt->execute([$uid, $kanaId, 'hiragana']);
+            $stmt->execute([$uid, $kanaId, 'katakana']);
+        }
+        header('Location: explain-kana.php');
+    } else {
+        // Familiar: progress 50, last_encountered = now
+        $stmt = $dbh->prepare(
+            'INSERT INTO user_kana_progress (user_fk, kana_fk, kana_type, progress, last_time_encountered)
+             VALUES (?, ?, ?, 50, NOW())'
+        );
+        foreach ($kanaRows as $kanaId) {
+            $stmt->execute([$uid, $kanaId, 'hiragana']);
+            $stmt->execute([$uid, $kanaId, 'katakana']);
+        }
+        header('Location: kana-learning-home.php');
     }
-
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Select Kana Level</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kana Level - Japanese Kickstart</title>
     <link rel="stylesheet" href="global-styles.css">
 </head>
-
 <body class="dark-mode">
 
-<?php 
-    $pageTitle = "Choose Your Level";
-    include 'menu-bar.php'; 
+<?php
+$pageTitle = "Kana Level";
+include 'menu-bar.php';
 ?>
 
-<main class="kana-level-container">
+<main>
+    <div class="page-content">
 
-    <h1 class="kana-title">
-        Choose your starting point
-    </h1>
+        <h2 class="page-heading">Are you familiar with Kana?</h2>
+        <p class="page-subtext">Kana is the Japanese phonetic alphabet, consisting of Hiragana and Katakana.</p>
 
-    <p>Logged in as: <?= htmlspecialchars($user['email']) ?></p>
+        <form method="POST" style="display:flex;flex-direction:column;gap:16px;">
+            <button type="submit" name="kana_level" value="no" class="btn btn-outline">
+                No — Start from the beginning
+            </button>
+            <button type="submit" name="kana_level" value="yes" class="btn btn-primary">
+                Yes — I already know some Kana
+            </button>
+        </form>
 
-    <form method="POST" class="kana-level-form">
-
-        <button type="submit" name="kana_level" value="beginner" class="kana-card">
-            <strong>Beginner</strong><br>
-            <span class="kana-subtext">Just getting started</span>
-        </button>
-
-        <button type="submit" name="kana_level" value="intermediate" class="kana-card">
-            <strong>Intermediate</strong><br>
-            <span class="kana-subtext">Some kana experience</span>
-        </button>
-
-        <button type="submit" name="kana_level" value="expert" class="kana-card">
-            <strong>Advanced</strong><br>
-            <span class="kana-subtext">Comfortable with kana</span>
-        </button>
-
-    </form>
-
-
+    </div>
 </main>
-
-<footer></footer>
 
 <script src="global-scripts.js"></script>
 </body>
