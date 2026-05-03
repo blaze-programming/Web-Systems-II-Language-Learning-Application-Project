@@ -86,13 +86,13 @@ include 'menu-bar.php';
 
         <form method="POST" style="display:flex;flex-direction:column;gap:16px;">
             <button type="submit" name="level" value="beginner" class="btn btn-outline">
-                🌱 Beginner — Start from scratch
+                Beginner — Start from scratch
             </button>
             <button type="submit" name="level" value="intermediate" class="btn btn-outline">
-                📈 Intermediate — I know some phrases
+                Intermediate — I know some phrases
             </button>
             <button type="submit" name="level" value="expert" class="btn btn-primary">
-                🎯 Expert — I'm comfortable with Japanese sounds
+                Expert — I'm comfortable with Japanese sounds
             </button>
         </form>
 
