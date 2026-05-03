@@ -43,37 +43,29 @@ include 'menu-bar.php';
 <main>
     <div class="page-content">
 
-        <h2 class="page-heading">Welcome back</h2>
-
         <?php if ($error): ?>
             <div class="error-msg"><?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
 
         <form method="POST" action="login.php" style="display:flex;flex-direction:column;gap:16px;">
 
-            <div class="form-group">
-                <label class="form-label" for="email">Email</label>
-                <input class="form-input" type="email" id="email" name="email" required
-                       value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
-            </div>
+            <input class="form-input" type="email" id="email" name="email" required
+                   placeholder="Email"
+                   value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
 
-            <div class="form-group">
-                <label class="form-label" for="password">Password</label>
-                <input class="form-input" type="password" id="password" name="password" required>
-            </div>
+            <input class="form-input" type="password" id="password" name="password" required
+                   placeholder="Password">
 
-            <div style="display:flex;align-items:center;gap:8px;">
-                <input type="checkbox" id="remember" name="remember" style="display:inline-block;width:auto;">
-                <label for="remember" style="font-size:0.9rem;">Remember me</label>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+                <button type="button" class="btn-text-link" onclick="window.location.href='register.php'">
+                    Create<br>Account
+                </button>
+                <button type="submit" class="btn btn-outline" style="width:auto;padding:16px 32px;">
+                    Login
+                </button>
             </div>
-
-            <button type="submit" class="btn btn-primary">Log In</button>
 
         </form>
-
-        <button class="btn btn-outline" onclick="window.location.href='register.php'">
-            Create an Account
-        </button>
 
     </div>
 </main>

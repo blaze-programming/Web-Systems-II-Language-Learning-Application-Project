@@ -6,8 +6,8 @@ if (!$auth->isLogged()) {
     exit();
 }
 
-$user = $auth->getUser($_COOKIE[$config->cookie_name]);
-$uid  = $user['uid'];
+$user = $auth->getCurrentUser();
+$uid  = $user['id'];
 
 // Check if user has any kana progress
 $stmtKana = $dbh->prepare('SELECT COUNT(*) FROM user_kana_progress WHERE user_fk = ?');

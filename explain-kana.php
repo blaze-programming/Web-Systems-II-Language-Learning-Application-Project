@@ -42,11 +42,22 @@ include 'menu-bar.php';
 
         <div class="video-wrap">
             <iframe
-                src="https://www.youtube.com/embed/6p9Il_j0zjc"
+                src="https://www.youtube.com/embed/4Irzvrcpf4Q"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
         </div>
+
+        <p class="page-subtext">
+            Japanese does not have a traditional alphabet like English. It uses 3 different writing systems.
+            Kanji is where every word has a unique symbol, which takes years to master. And also Hiragana and
+            Katakana. These are more like a traditional alphabet. These are the kana. Each kana represents a
+            sound. Learning the kana is the first step to being able to read, write, speak, and understand
+            Japanese. Hiragana and katakana have the same set of sounds, but they are used in different
+            places. Hiragana is used for words or grammar which do not have a kanji writing. Katakana is used
+            mostly to write loan words, which are words from other languages. Lastly there is romaji. This
+            uses English characters to show the nearest English pronunciation to a kana.
+        </p>
 
         <a href="kana-learning-home.php" class="btn btn-primary">Continue to Kana Exercises</a>
 

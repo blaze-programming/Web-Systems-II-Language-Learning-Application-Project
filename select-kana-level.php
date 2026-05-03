@@ -6,8 +6,8 @@ if (!$auth->isLogged()) {
     exit();
 }
 
-$user = $auth->getUser($_COOKIE[$config->cookie_name]);
-$uid  = $user['uid'];
+$user = $auth->getCurrentUser();
+$uid  = $user['id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['kana_level'])) {
     $level = $_POST['kana_level'];
@@ -29,11 +29,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['kana_level'])) {
             $stmt->execute([$uid, $kanaId, 'katakana']);
         }
         header('Location: explain-kana.php');
-    } else {
-        // Familiar: progress 50, last_encountered = now
+    } elseif ($level === 'some') {
+        // Some knowledge: progress 25, last_encountered = now
         $stmt = $dbh->prepare(
             'INSERT INTO user_kana_progress (user_fk, kana_fk, kana_type, progress, last_time_encountered)
-             VALUES (?, ?, ?, 50, NOW())'
+             VALUES (?, ?, ?, 25, NOW())'
+        );
+        foreach ($kanaRows as $kanaId) {
+            $stmt->execute([$uid, $kanaId, 'hiragana']);
+            $stmt->execute([$uid, $kanaId, 'katakana']);
+        }
+        header('Location: kana-learning-home.php');
+    } else {
+        // Most/All knowledge: progress 80, last_encountered = now
+        $stmt = $dbh->prepare(
+            'INSERT INTO user_kana_progress (user_fk, kana_fk, kana_type, progress, last_time_encountered)
+             VALUES (?, ?, ?, 80, NOW())'
         );
         foreach ($kanaRows as $kanaId) {
             $stmt->execute([$uid, $kanaId, 'hiragana']);
@@ -62,15 +73,17 @@ include 'menu-bar.php';
 <main>
     <div class="page-content">
 
-        <h2 class="page-heading">Are you familiar with Kana?</h2>
-        <p class="page-subtext">Kana is the Japanese phonetic alphabet, consisting of hiragana and katakana.</p>
+        <h2 class="page-heading">Select your proficiency<br>with kana</h2>
 
         <form method="POST" style="display:flex;flex-direction:column;gap:16px;">
             <button type="submit" name="kana_level" value="no" class="btn btn-outline">
-                No — Start from the beginning
+                Little/No<br>kana knowledge
             </button>
-            <button type="submit" name="kana_level" value="yes" class="btn btn-primary">
-                Yes — I already know some Kana
+            <button type="submit" name="kana_level" value="some" class="btn btn-outline">
+                Some<br>kana knowledge
+            </button>
+            <button type="submit" name="kana_level" value="yes" class="btn btn-outline">
+                Most/All<br>kana knowledge
             </button>
         </form>
 
