@@ -6,8 +6,8 @@ if (!$auth->isLogged()) {
     exit();
 }
 
-$user = $auth->getUser($_COOKIE[$config->cookie_name]);
-$uid  = $user['uid'];
+$user = $auth->getCurrentUser();
+$uid  = $user['id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['level'])) {
     $level = $_POST['level'];

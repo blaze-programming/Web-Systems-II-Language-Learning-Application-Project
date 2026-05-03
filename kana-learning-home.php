@@ -6,8 +6,8 @@ if (!$auth->isLogged()) {
     exit();
 }
 
-$user = $auth->getUser($_COOKIE[$config->cookie_name]);
-$uid  = $user['uid'];
+$user = $auth->getCurrentUser();
+$uid  = $user['id'];
 
 // Fetch all kana with the user's hiragana progress
 $hiraganaRows = $dbh->prepare(

@@ -6,8 +6,8 @@ if (!$auth->isLogged()) {
     exit();
 }
 
-$user = $auth->getUser($_COOKIE[$config->cookie_name]);
-$uid  = $user['uid'];
+$user = $auth->getCurrentUser();
+$uid  = $user['id'];
 
 // --- Handle AJAX progress update ---
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajax_update'])) {
