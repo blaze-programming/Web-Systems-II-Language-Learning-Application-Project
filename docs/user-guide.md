@@ -11,8 +11,8 @@
 3. [The Home Screen](#3-the-home-screen)
 4. [Choosing What to Practice](#4-choosing-what-to-practice)
 5. [Kana Exercises](#5-kana-exercises)
-   - 5a. [What is Kana? (Intro Page)](#5a-what-is-kana-intro-page)
-   - 5b. [Selecting Your Kana Level](#5b-selecting-your-kana-level)
+   - 5a. [Selecting Your Kana Level](#5b-selecting-your-kana-level)
+   - 5b. [What is Kana? (Intro Page)](#5a-what-is-kana-intro-page)
    - 5c. [Kana Learning Home — Viewing Your Progress](#5c-kana-learning-home--viewing-your-progress)
    - 5d. [Doing a Kana Exercise](#5d-doing-a-kana-exercise)
 6. [Listening Exercises](#6-listening-exercises)
@@ -35,30 +35,30 @@ Before you can use Japanese Kickstart you need a free account.
 
 1. Open a web browser (such as Chrome, Firefox, Edge, or Safari) and navigate to the Japanese Kickstart website.
 
-   [IMAGE of the browser address bar with the Japanese Kickstart URL entered, for the purpose of showing users where to type the site address]
+   You can find the homepage at: https://web-systems-application-uf3mf.ondigitalocean.app/
 
 2. The **Home** page will appear. Click the **Start Learning** button in the centre of the screen.
 
-   [IMAGE of the Home page showing the "Start Learning" button, for the purpose of showing users where to begin]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/e56de89b-f3e4-466f-ad5f-77c3d0e17d77" />
 
-3. Because you are not yet logged in, you will be taken to the **Login** page. Click the **Create Account** button on the left side of the form.
+4. Because you are not yet logged in, you will be taken to the **Login** page. Click the **Create Account** button on the left side of the form.
 
-   [IMAGE of the Login page highlighting the "Create Account" button, for the purpose of showing users how to navigate to registration]
+   <img height="400" alt="Screenshot 2026-05-03 190424" src="https://github.com/user-attachments/assets/7df4c5ff-0699-4222-9c46-f8524665d433" />
 
-4. The **Create an Account** page opens. Fill in the three fields:
+5. The **Create an Account** page opens. Fill in the three fields:
    - **Email** — enter a valid email address you have access to (e.g. `yourname@example.com`).
    - **Password** — choose a password of your choice.
    - **Confirm Password** — type the same password again exactly.
 
-   [IMAGE of the Create an Account form with all three fields filled in, for the purpose of illustrating what a completed registration form looks like]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/3343c67f-855b-4dbb-bd74-3b7221465816" />
 
-5. Click the **Register** button.
+6. Click the **Register** button.
 
-6. A green success message will appear at the top of the form reading *"Registration successful! You can now log in."*
+7. A green success message will appear at the top of the form reading *"Registration successful! You can now log in."*
 
-   [IMAGE of the success message after registration, for the purpose of confirming to users that their account was created]
+   <img  height="400" alt="image" src="https://github.com/user-attachments/assets/2287c2e8-a005-46a3-b71c-6e34709aa3d6" />
 
-7. You can now proceed to [log in](#2-logging-in).
+8. You can now proceed to [log in](#2-logging-in).
 
 > **Tip:** If a red error message appears instead, read it carefully. Common causes are a mismatched password confirmation, a password that is too short, or an email address that is already registered.
 
@@ -70,13 +70,13 @@ Before you can use Japanese Kickstart you need a free account.
 2. Click **Start Learning**.
 3. The **Login** page opens.
 
-   [IMAGE of the Login page with the Email and Password fields visible, for the purpose of orienting users to the login form]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/ef75de7a-a93e-4782-8f77-c7becd5b6087" />
 
 4. Enter your **Email** in the first field.
 5. Enter your **Password** in the second field.
 6. Click the **Login** button (on the right side of the form).
 
-   [IMAGE of the Login page with both fields completed and the Login button highlighted, for the purpose of showing users the final step of logging in]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/2392eec9-a464-4677-a81f-2850cc57872b" />
 
 7. You are now logged in and will be taken directly to the **Select Exercise** page.
 
@@ -86,11 +86,13 @@ Before you can use Japanese Kickstart you need a free account.
 
 ## 3. The Home Screen
 
-After logging in (or by clicking the site logo / home link in the top navigation bar) you will see the **Home** screen.
+After logging in (or by clicking the site logo / home link in the navigation bar) you will see the **Home** screen.
 
-[IMAGE of the Home screen showing the welcome message and "Start Learning" button, for the purpose of orienting users to the main page]
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/e56de89b-f3e4-466f-ad5f-77c3d0e17d77" />
 
-The top navigation bar is present on every page and contains:
+The navigation bar is accessible via clicking the menu icon any page page
+
+<img height="400" alt="Screenshot 2026-05-03 191522" src="https://github.com/user-attachments/assets/8b73cc17-7c0f-4882-ae74-846dce0058cf" />
 
 | Area | What it does |
 |------|-------------|
@@ -98,7 +100,7 @@ The top navigation bar is present on every page and contains:
 | **Profile icon** | Opens your Profile page |
 | **Logout button** | Ends your session and returns you to the Home page |
 
-[IMAGE of the navigation bar with the site title, profile icon, and logout button labelled, for the purpose of helping users identify the navigation controls]
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/8e6637fc-8415-4cf3-a146-3b871ec9671e" />
 
 ---
 
@@ -106,12 +108,12 @@ The top navigation bar is present on every page and contains:
 
 After clicking **Start Learning** from the Home page (or navigating to the site while already logged in), you land on the **Select Exercise** page.
 
-[IMAGE of the "What would you like to practice?" page showing the Kana and Listening buttons, for the purpose of showing users their two exercise options]
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/63028672-49e0-42b0-9413-f31a5a5c9300" />
 
 You have two options:
 
-- **✍️ Kana** — Learn and practise recognising the Japanese writing characters.
-- **🎧 Listening** — Train your ear to identify spoken Japanese sounds.
+- **Kana** — Learn and practise recognising the Japanese writing characters.
+- **Listening** — Train your ear to identify spoken Japanese sounds.
 
 Click the **i** button next to either option to see a brief description of what that exercise involves without leaving the page.
 
@@ -121,33 +123,18 @@ Click the exercise you want to start.
 
 ## 5. Kana Exercises
 
-### 5a. What is Kana? (Intro Page)
+### 5a. Selecting Your Kana Level
 
-If you selected **Kana** for the first time, the app will show you an introduction page titled **"What is Kana?"**
+The first time you start Kana, the app asks about your existing knowledge so it can provide the best experience to beginners and pros alike.
 
-[IMAGE of the "What is Kana?" page showing the embedded video and the explanatory text below it, for the purpose of letting users know what to expect on this page]
-
-This page includes:
-- An **embedded video** explaining what Kana is.
-- A written explanation of the three Japanese writing systems: **Hiragana**, **Katakana**, and **Rōmaji**.
-
-Read through the explanation (and watch the video if you wish), then click **Continue to Kana Exercises** to move on.
-
----
-
-### 5b. Selecting Your Kana Level
-
-The first time you start Kana, the app asks about your existing knowledge so it can set up your starting progress appropriately.
-
-[IMAGE of the "Select your proficiency with kana" page showing the three level buttons, for the purpose of showing users the level selection screen]
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/496e290f-7b5d-4b18-bf1d-527c7f2a07ea" />
 
 Choose the option that best describes you:
 
 | Button | Who should pick this |
 |--------|----------------------|
-| **Little/No kana knowledge** | You have never studied Hiragana or Katakana before |
-| **Some kana knowledge** | You recognise some characters but are not fluent |
-| **Most/All kana knowledge** | You are already comfortable reading Kana |
+| **No** | You have never studied Hiragana or Katakana before |
+| **Yes** | You are already comfortable reading Kana |
 
 Click your choice. The app records your starting level and takes you to the next page automatically.
 
@@ -156,11 +143,23 @@ Click your choice. The app records your starting level and takes you to the next
 
 ---
 
+### 5b. What is Kana? (Intro Page)
+
+If you selected **Kana** for the first time, the app will show you an introduction page titled **"What is Kana?"**
+
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/1b389353-951e-4efe-89d7-3c5894cee019" />
+
+This page includes:
+- A **video** by JapanesePod101 explaining the basics of pronuciaiton and Kana.
+- A written explanation of the three Japanese writing systems: **Hiragana**, **Katakana**, and **Rōmaji**.
+
+Read through the explanation (and watch the video), then click **Continue to Kana Exercises** to move on.
+
+---
+
 ### 5c. Kana Learning Home — Viewing Your Progress
 
 The **Kana Learning Home** gives you a bird's-eye view of every Hiragana and Katakana character you are working on.
-
-[IMAGE of the Kana Learning Home showing the grid of Hiragana and Katakana cells each with a progress bar, for the purpose of showing users how their individual character progress is displayed]
 
 Each character tile shows:
 - The **Rōmaji** (English-like pronunciation) at the top.
@@ -173,13 +172,15 @@ The more you practise a character, the more filled its bar becomes (up to 100%).
 
 **To revisit the Kana intro**, click the **← What is Kana?** link below that button.
 
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/08053907-d419-4438-ab6c-73bbb2b02d69" />
+
 ---
 
 ### 5d. Doing a Kana Exercise
 
 Each exercise question asks you to match one form of a character to another.
 
-[IMAGE of the Kana Exercise page showing a character prompt at the top and the six answer buttons below it, for the purpose of illustrating what a typical exercise question looks like]
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/1e9c9608-6d94-4355-aafd-0ee8bf3c1570" />
 
 **Step-by-step:**
 
@@ -190,11 +191,12 @@ Each exercise question asks you to match one form of a character to another.
 
    - If you are **correct**, the button turns **green** and a **Continue →** button appears.
 
-     [IMAGE of the exercise page after a correct answer with the green button and "Continue →" highlighted, for the purpose of showing users what a correct answer looks like]
+     <img height="400" alt="image" src="https://github.com/user-attachments/assets/15a70688-7720-4bdb-89a0-3571a14a8f6e" />
 
    - If you are **wrong**, the button turns **red** and a **Try Again** button appears.
 
-     [IMAGE of the exercise page after a wrong answer with the red button and "Try Again" highlighted, for the purpose of showing users what an incorrect answer looks like]
+     <img height="400" alt="image" src="https://github.com/user-attachments/assets/800b8df5-1777-4836-b1cf-72c3bd6f6c0e" />
+
 
 5. Click **Continue →** to load a new question, or **Try Again** to re-attempt the same question with the same options.
 
@@ -220,13 +222,13 @@ Click **Let's Go →** when you are ready to continue.
 
 The first time you start Listening, the app asks about your experience.
 
-[IMAGE of the "Select your listening level" page showing the three level buttons, for the purpose of showing users the level selection screen]
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/5adea3d2-8f40-43ab-b6c9-ad71345f2ea8" />
 
 | Button | Who should pick this |
 |--------|----------------------|
-| **🌱 Beginner — Start from scratch** | You have little or no exposure to spoken Japanese |
-| **📈 Intermediate — I know some phrases** | You can recognise some spoken Japanese words or phrases |
-| **🎯 Expert — I'm comfortable with Japanese sounds** | You are already familiar with Japanese pronunciation |
+| **Beginner — Start from scratch** | You have little or no exposure to spoken Japanese |
+| **Intermediate — I know some phrases** | You can recognise some spoken Japanese words or phrases |
+| **Expert — I'm comfortable with Japanese sounds** | You are already familiar with Japanese pronunciation |
 
 Click your level. The app sets your starting progress and takes you to the Listening Home.
 
@@ -236,7 +238,7 @@ Click your level. The app sets your starting progress and takes you to the Liste
 
 The **Listening Home** shows your overall progress across all listening exercises.
 
-[IMAGE of the Listening Home page showing the "Overall Progress" bar and the "Start Exercises" button, for the purpose of showing users where their progress is displayed and how to begin an exercise session]
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/08f25b51-b8ba-45d5-8b01-752813bdbb23" />
 
 The **Overall Progress** bar at the top fills from 0% to 100% as you complete exercises.
 
