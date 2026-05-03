@@ -1,14 +1,13 @@
 <header>
-    <button id="home-btn" class="icon-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 9L12 2L21 9V20A2 2 0 0 1 19 22H5A2 2 0 0 1 3 20V9Z"/>
-            <path d="M9 22V12H15V22"/>
+    <button id="back-btn" class="icon-btn" aria-label="Go back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
         </svg>
     </button>
 
-    <h1><?php echo $pageTitle ?? "no page title"; ?></h1>
-    
-    <button id="menu-btn" class="icon-btn">
+    <h1><?php echo htmlspecialchars($pageTitle ?? "Japanese Kickstart"); ?></h1>
+
+    <button id="menu-btn" class="icon-btn" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -21,22 +20,26 @@
 <div id="side-menu">
     <div class="side-menu-header">
         <h2>Menu</h2>
-        <button id="close-side-menu-btn">&times;</button>
+        <button id="close-side-menu-btn" aria-label="Close menu">&times;</button>
     </div>
 
     <div class="side-menu-content">
-        
+
         <div class="side-menu-group">
-            <h3>Account</h3>
-            <a class="side-menu-link" href="./profile?tab=account_info">Go to profile</a>
-            <a class="side-menu-link" href="./profile?tab=my_progress">My Progress</a>
+            <h3>Navigation</h3>
+            <a class="side-menu-link" href="home.php">🏠 Home</a>
+            <a class="side-menu-link" href="profile.php">👤 My Profile</a>
+            <?php if (isset($auth) && $auth->isLogged()): ?>
+                <a class="side-menu-link" href="logout.php">🚪 Logout</a>
+            <?php else: ?>
+                <a class="side-menu-link" href="login.php">🔑 Login</a>
+            <?php endif; ?>
         </div>
 
         <div class="side-menu-group">
             <h3>Exercises</h3>
-            <a class="side-menu-link" href="./kana-home">Kana</a>
-            <a class="side-menu-link" href="./listening-home">Listening</a>
-            <a class="side-menu-link" href="./grammar-home">Grammar</a>
+            <a class="side-menu-link" href="kana-learning-home.php">✍️ Kana</a>
+            <a class="side-menu-link" href="listening-home.php">🎧 Listening</a>
         </div>
 
         <div class="side-menu-group">
@@ -48,52 +51,15 @@
                     <label for="theme-toggle" class="toggle-switch"></label>
                 </div>
             </div>
-            
-            <div class="side-menu-toggle">
-                <span>Audio</span>
-                <div class="toggle-container">
-                    <input type="checkbox" id="master-audio-toggle" checked>
-                    <label for="master-audio-toggle" class="toggle-switch"></label>
-                </div>
-            </div>
-
-            <div id="audio-subsettings" class="sub-menu">
-                <div class="side-menu-toggle">
-                    <span>Sound Effects</span>
-                    <div class="toggle-container">
-                        <input type="checkbox" id="sfx-toggle" checked>
-                        <label for="sfx-toggle" class="toggle-switch"></label>
-                    </div>
-                </div>
-                <div class="side-menu-toggle">
-                    <span>Exercise Sound</span>
-                    <div class="toggle-container">
-                        <input type="checkbox" id="exercise-sound-toggle" checked>
-                        <label for="exercise-sound-toggle" class="toggle-switch"></label>
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <?php if (isset($isExercisePage) && $isExercisePage): ?>
-        <div class="side-menu-group" id="exercise-settings-group">
-            <h3>Exercise Settings</h3>
-            <div class="side-menu-toggle">
-                <span>Show Romaji</span>
-                <div class="toggle-container">
-                    <input type="checkbox" id="show-romaji-toggle">
-                    <label for="show-romaji-toggle" class="toggle-switch"></label>
-                </div>
-            </div>
-            </div>
-        <?php endif; ?>
-
         <div class="side-menu-group">
-            <h3>Attribution</h3>
+            <h3>Contributors</h3>
             <div class="attribution-text">
-                Made by: Creator 1, Creator 2, Creator 3
+                Aram A.<br>
+                Juan P.<br>
+                Hayden G.
             </div>
-            <a class="side-menu-link" href="./attribution">See all attribution</a>
         </div>
 
     </div>

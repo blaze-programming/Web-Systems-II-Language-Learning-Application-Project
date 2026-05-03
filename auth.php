@@ -5,12 +5,19 @@ session_start();
 // Autoload composer dependencies
 require_once __DIR__ . '/vendor/autoload.php'; 
 
-// Fetch environment variables
-$host = getenv('DB_HOST') ?? '127.0.0.1';
-$port = getenv('DB_PORT') ?? '3306';
-$user = getenv('DB_USERNAME') ?? 'root';
-$pass = getenv('DB_PASSWORD') ?? '';
-$dbname = getenv('DB_DATABASE') ?? 'WebSystems2Local';
+// Local connection settings (used by default)
+$host   = '127.0.0.1';
+$port   = '3306';
+$user   = 'root';
+$pass   = '';
+$dbname = 'WebSystems2Local';
+
+// Override with environment variables when deployed
+if (getenv('DB_HOST'))     $host   = getenv('DB_HOST');
+if (getenv('DB_PORT'))     $port   = getenv('DB_PORT');
+if (getenv('DB_USERNAME')) $user   = getenv('DB_USERNAME');
+if (getenv('DB_PASSWORD')) $pass   = getenv('DB_PASSWORD');
+if (getenv('DB_DATABASE')) $dbname = getenv('DB_DATABASE');
 
 try {
     // Create PDO Connection
