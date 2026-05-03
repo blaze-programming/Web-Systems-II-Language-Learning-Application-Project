@@ -50,15 +50,14 @@ include 'menu-bar.php';
         <form method="POST" action="login.php" style="display:flex;flex-direction:column;gap:16px;">
 
             <input class="form-input" type="email" id="email" name="email" required
-                   placeholder="Username"
+                   placeholder="Email"
                    value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
 
             <input class="form-input" type="password" id="password" name="password" required
                    placeholder="Password">
 
             <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
-                <button type="button" class="btn btn-ghost" onclick="window.location.href='register.php'"
-                        style="background:none;border:none;color:var(--text-color);font-size:1rem;cursor:pointer;padding:0;text-align:left;line-height:1.3;">
+                <button type="button" class="btn-text-link" onclick="window.location.href='register.php'">
                     Create<br>Account
                 </button>
                 <button type="submit" class="btn btn-outline" style="width:auto;padding:16px 32px;">
