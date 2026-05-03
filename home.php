@@ -7,7 +7,7 @@ if (!$auth->isLogged()) {
 }
 
 // Get current user from session
-$user = $auth->getUser($_COOKIE['phpauth_session_cookie']);
+//$user = $auth->getUser($_COOKIE['phpauth_session_cookie']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,14 +22,17 @@ $user = $auth->getUser($_COOKIE['phpauth_session_cookie']);
     <?php 
         $pageTitle = "Home";
         include 'menu-bar.php'; 
+        
     ?>
-
     <main>
 
-        <h2>Welcome, <?= htmlspecialchars($user['email']) ?>!</h2>
-
-        <!-- added line -->
-        <p>Logged in as: <?= htmlspecialchars($user['email']) ?></p>
+           <?php
+                if(getenv('DB_DATABASE')){
+                    echo getenv('DB_DATABASE');
+                }else {
+                    echo 'no db';
+                }
+           ?>
 
     </main>
 

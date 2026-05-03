@@ -6,11 +6,11 @@ session_start();
 require_once __DIR__ . '/vendor/autoload.php'; 
 
 // Fetch environment variables
-$host = getenv('DB_HOST');
-$port = getenv('DB_PORT');
-$user = getenv('DB_USERNAME');
-$pass = getenv('DB_PASSWORD');
-$dbname = getenv('DB_DATABASE');
+$host = getenv('DB_HOST') ?? '127.0.0.1';
+$port = getenv('DB_PORT') ?? '3306';
+$user = getenv('DB_USERNAME') ?? 'root';
+$pass = getenv('DB_PASSWORD') ?? '';
+$dbname = getenv('DB_DATABASE') ?? 'WebSystems2Local';
 
 try {
     // Create PDO Connection

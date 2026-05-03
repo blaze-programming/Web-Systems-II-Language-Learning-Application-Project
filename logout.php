@@ -12,5 +12,5 @@ if ($auth->isLogged()) {
     setcookie($config->cookie_name, '', time() - 3600, $config->cookie_path, $config->cookie_domain, $config->cookie_secure, $config->cookie_http);
 }
 
-header('Location: login.php');
+header('Location: home.php');
 exit();

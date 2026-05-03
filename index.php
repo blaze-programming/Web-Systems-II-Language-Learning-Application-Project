@@ -1,10 +1,10 @@
 <?php
 // DigitalOcean App Platform injects DB credentials automatically 
-$host = getenv('DB_HOST');
-$port = getenv('DB_PORT');
-$user = getenv('DB_USERNAME');
-$pass = getenv('DB_PASSWORD');
-$dbname = getenv('DB_DATABASE');
+$host = '127.0.0.1'; //getenv('DB_HOST');
+$port = '3306';//getenv('DB_PORT');
+$user = 'root';//getenv('DB_USERNAME');
+$pass = '';//getenv('DB_PASSWORD');
+$dbname = 'WebSystems2Local';//getenv('DB_DATABASE');
 
 echo "<h1>Web Systems II test</h1>";
 

@@ -1,14 +1,9 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "f9371e2503d0ce7dfbdde8c2eb6f4fea",
     "packages": [
         {
             "name": "graham-campbell/result-type",
             "version": "v1.1.4",
+            "version_normalized": "1.1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
@@ -27,7 +22,9 @@
             "require-dev": {
                 "phpunit/phpunit": "^8.5.41 || ^9.6.22 || ^10.5.45 || ^11.5.7"
             },
+            "time": "2025-12-27T19:43:20+00:00",
             "type": "library",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "GrahamCampbell\\ResultType\\": "src/"
@@ -66,11 +63,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-27T19:43:20+00:00"
+            "install-path": "../graham-campbell/result-type"
         },
         {
             "name": "phpauth/phpauth",
             "version": "1.6.1",
+            "version_normalized": "1.6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPAuth/PHPAuth.git",
@@ -103,7 +101,9 @@
                 "phpauth/phpauth.l10n": "^0.1.0",
                 "phpmailer/phpmailer": "^6.0"
             },
+            "time": "2026-01-17T21:04:57+00:00",
             "type": "library",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "PHPAuth\\": "sources/"
@@ -124,11 +124,12 @@
                 "issues": "https://github.com/PHPAuth/PHPAuth/issues",
                 "source": "https://github.com/PHPAuth/PHPAuth/tree/1.6.1"
             },
-            "time": "2026-01-17T21:04:57+00:00"
+            "install-path": "../phpauth/phpauth"
         },
         {
             "name": "phpmailer/phpmailer",
             "version": "v6.12.0",
+            "version_normalized": "6.12.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
@@ -167,7 +168,9 @@
                 "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)",
                 "thenetworg/oauth2-azure": "Needed for Microsoft XOAUTH2 authentication"
             },
+            "time": "2025-10-15T16:49:08+00:00",
             "type": "library",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "PHPMailer\\PHPMailer\\": "src/"
@@ -205,11 +208,12 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-15T16:49:08+00:00"
+            "install-path": "../phpmailer/phpmailer"
         },
         {
             "name": "phpoption/phpoption",
             "version": "1.9.5",
+            "version_normalized": "1.9.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
@@ -228,6 +232,7 @@
                 "bamarni/composer-bin-plugin": "^1.8.2",
                 "phpunit/phpunit": "^8.5.44 || ^9.6.25 || ^10.5.53 || ^11.5.34"
             },
+            "time": "2025-12-27T19:41:33+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -238,6 +243,7 @@
                     "dev-master": "1.9-dev"
                 }
             },
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "PhpOption\\": "src/PhpOption/"
@@ -280,11 +286,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-27T19:41:33+00:00"
+            "install-path": "../phpoption/phpoption"
         },
         {
             "name": "symfony/polyfill-ctype",
             "version": "v1.37.0",
+            "version_normalized": "1.37.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -305,6 +312,7 @@
             "suggest": {
                 "ext-ctype": "For best performance"
             },
+            "time": "2026-04-10T16:19:22+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -312,6 +320,7 @@
                     "name": "symfony/polyfill"
                 }
             },
+            "installation-source": "source",
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -363,11 +372,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T16:19:22+00:00"
+            "install-path": "../symfony/polyfill-ctype"
         },
         {
             "name": "symfony/polyfill-mbstring",
             "version": "v1.37.0",
+            "version_normalized": "1.37.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -389,6 +399,7 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
+            "time": "2026-04-10T17:25:58+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -396,6 +407,7 @@
                     "name": "symfony/polyfill"
                 }
             },
+            "installation-source": "source",
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -448,11 +460,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T17:25:58+00:00"
+            "install-path": "../symfony/polyfill-mbstring"
         },
         {
             "name": "symfony/polyfill-php80",
             "version": "v1.37.0",
+            "version_normalized": "1.37.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -467,6 +480,7 @@
             "require": {
                 "php": ">=7.2"
             },
+            "time": "2026-04-10T16:19:22+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -474,6 +488,7 @@
                     "name": "symfony/polyfill"
                 }
             },
+            "installation-source": "source",
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -532,11 +547,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T16:19:22+00:00"
+            "install-path": "../symfony/polyfill-php80"
         },
         {
             "name": "vlucas/phpdotenv",
             "version": "v5.6.3",
+            "version_normalized": "5.6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
@@ -565,6 +581,7 @@
             "suggest": {
                 "ext-filter": "Required to use the boolean validator."
             },
+            "time": "2025-12-27T19:49:13+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -575,6 +592,7 @@
                     "dev-master": "5.6-dev"
                 }
             },
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Dotenv\\": "src/"
@@ -616,16 +634,9 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-27T19:49:13+00:00"
+            "install-path": "../vlucas/phpdotenv"
         }
     ],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {},
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "dev": true,
+    "dev-package-names": []
 }

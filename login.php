@@ -6,7 +6,7 @@ $message = '';
 
 // Redirect if already logged in
 if ($auth->isLogged()) {
-    header('Location: dashboard.php');
+    header('Location: home.php');
     exit();
 }
 
@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message = "<div style='color: red;'>{$result['message']}</div>";
     } else {
         // Set the authentication cookie
-        setcookie($config->cookie_name, $result['hash'], $result['expire'], $config->cookie_path, $config->cookie_domain, $config->cookie_secure, $config->cookie_http);
+        //setcookie($config->cookie_name, $result['hash'], $result['expire'], $config->cookie_path, $config->cookie_domain, $config->cookie_secure, $config->cookie_http);
         
-        header('Location: dashboard.php');
+        header('Location: home.php');
         exit();
     }
 }
