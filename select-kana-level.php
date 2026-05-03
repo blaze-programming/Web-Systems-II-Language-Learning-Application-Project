@@ -73,17 +73,14 @@ include 'menu-bar.php';
 <main>
     <div class="page-content">
 
-        <h2 class="page-heading">Select your proficiency<br>with kana</h2>
+        <h2 class="page-heading">Are you Familliar with kana?</h2>
 
         <form method="POST" style="display:flex;flex-direction:column;gap:16px;">
-            <button type="submit" name="kana_level" value="no" class="btn btn-outline">
-                Little/No<br>kana knowledge
+            <button type="submit" name="kana_level" value="no" class="btn btn-outline" style="font-size:1.25em;">
+                No
             </button>
-            <button type="submit" name="kana_level" value="some" class="btn btn-outline">
-                Some<br>kana knowledge
-            </button>
-            <button type="submit" name="kana_level" value="yes" class="btn btn-outline">
-                Most/All<br>kana knowledge
+            <button type="submit" name="kana_level" value="yes" class="btn btn-outline" style="font-size:1.25em;">
+                Yes
             </button>
         </form>
 

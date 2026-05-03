@@ -40,10 +40,6 @@ include 'menu-bar.php';
                    placeholder="Type the sounds you hear..." autocomplete="off">
         </div>
 
-        <p class="page-subtext" style="font-size:0.8rem;">
-            Exercises coming soon — this page is a placeholder.
-        </p>
-
     </div>
 </main>
 

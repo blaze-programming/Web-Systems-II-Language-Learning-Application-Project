@@ -45,7 +45,7 @@ include 'menu-bar.php';
         <div style="display:flex;flex-direction:column;gap:12px;">
 
             <div class="exercise-btn-row">
-                <a href="<?= htmlspecialchars($kanaTarget) ?>" class="btn btn-primary">✍️ Kana</a>
+                <a href="<?= htmlspecialchars($kanaTarget) ?>" class="btn btn-primary">あ Kana</a>
                 <button class="info-icon-btn" data-tooltip="kana-info" aria-label="Info about Kana">i</button>
             </div>
             <div class="info-tooltip" id="kana-info">
@@ -53,7 +53,13 @@ include 'menu-bar.php';
             </div>
 
             <div class="exercise-btn-row">
-                <a href="<?= htmlspecialchars($listenTarget) ?>" class="btn btn-primary">🎧 Listening</a>
+                <a href="<?= htmlspecialchars($listenTarget) ?>" class="btn btn-primary">
+                    <!-- speaker-icon.svg -->
+                    <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="filter: invert(1)">
+                        <image height="24" width="24" href="speaker-icon.svg"/>
+                    </svg>
+                    Listening
+                </a>
                 <button class="info-icon-btn" data-tooltip="listening-info" aria-label="Info about Listening">i</button>
             </div>
             <div class="info-tooltip" id="listening-info">

@@ -26,19 +26,44 @@
 
         <div class="side-menu-group">
             <h3>Navigation</h3>
-            <a class="side-menu-link" href="home.php">🏠 Home</a>
-            <a class="side-menu-link" href="profile.php">👤 My Profile</a>
+            <a class="side-menu-link" href="home.php">
+                <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="filter: brightness(0) invert(1)">
+                    <image height="16" width="16" href="home-icon.svg"/>
+                </svg>  
+                Home
+            </a>
+            <a class="side-menu-link" href="profile.php">
+                <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="filter: brightness(0) invert(1)">
+                    <image height="16" width="16" href="profile-icon.svg"/>
+                </svg>  
+                My Profile
+            </a>
             <?php if (isset($auth) && $auth->isLogged()): ?>
-                <a class="side-menu-link" href="logout.php">🚪 Logout</a>
+                <a class="side-menu-link" href="logout.php">
+                    <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="filter: brightness(0) invert(1)">
+                        <image height="16" width="16" href="logout-icon.svg"/>
+                    </svg>  
+                    Logout
+                </a>
             <?php else: ?>
-                <a class="side-menu-link" href="login.php">🔑 Login</a>
+                <a class="side-menu-link" href="login.php">
+                    <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="filter: brightness(0) invert(1)">
+                        <image height="16" width="16" href="login-icon.svg"/>
+                    </svg>  
+                    Login
+                </a>
             <?php endif; ?>
         </div>
 
         <div class="side-menu-group">
             <h3>Exercises</h3>
-            <a class="side-menu-link" href="kana-learning-home.php">✍️ Kana</a>
-            <a class="side-menu-link" href="listening-home.php">🎧 Listening</a>
+            <a class="side-menu-link" href="kana-learning-home.php">あ Kana</a>
+            <a class="side-menu-link" href="listening-home.php">
+                <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="filter: invert(1)">
+                    <image height="16" width="16" href="speaker-icon.svg"/>
+                </svg>    
+                Listening
+            </a>
         </div>
 
         <div class="side-menu-group">
