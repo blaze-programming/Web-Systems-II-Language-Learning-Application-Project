@@ -11,8 +11,8 @@
 3. [The Home Screen](#3-the-home-screen)
 4. [Choosing What to Practice](#4-choosing-what-to-practice)
 5. [Kana Exercises](#5-kana-exercises)
-   - 5a. [Selecting Your Kana Level](#5b-selecting-your-kana-level)
-   - 5b. [What is Kana? (Intro Page)](#5a-what-is-kana-intro-page)
+   - 5a. [Selecting Your Kana Level](#5a-selecting-your-kana-level)
+   - 5b. [What is Kana? (Intro Page)](#5b-what-is-kana-intro-page)
    - 5c. [Kana Learning Home — Viewing Your Progress](#5c-kana-learning-home--viewing-your-progress)
    - 5d. [Doing a Kana Exercise](#5d-doing-a-kana-exercise)
 6. [Listening Exercises](#6-listening-exercises)
@@ -180,7 +180,7 @@ The more you practise a character, the more filled its bar becomes (up to 100%).
 
 Each exercise question asks you to match one form of a character to another.
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/1e9c9608-6d94-4355-aafd-0ee8bf3c1570" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/1e9c9608-6d94-4355-aafd-0ee8bf3c1570" />
 
 **Step-by-step:**
 
@@ -210,7 +210,7 @@ Each exercise question asks you to match one form of a character to another.
 
 If you selected **Listening** as a beginner, the app first shows an explanation page.
 
-[IMAGE of the "How the Exercises Work" page showing the explanatory paragraph, for the purpose of giving users context before their first listening exercise]
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/e648153a-fc19-4f5c-a83c-456e2336b127" />
 
 This page explains that listening exercises play audio in Japanese and ask you to type what you hear — focusing on sounds, not spelling or meaning.
 
@@ -248,7 +248,7 @@ Click **▶ Start Exercises** to begin.
 
 ### 6d. Doing a Listening Exercise
 
-[IMAGE of the Listening Exercise page showing the speaker button, the text input field, and the instruction text, for the purpose of showing users the layout of the exercise]
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/a229f0b8-cd30-4f60-be80-7c48bef46669" />
 
 **Step-by-step:**
 
@@ -256,8 +256,6 @@ Click **▶ Start Exercises** to begin.
 2. Listen carefully to the Japanese audio.
 3. In the **"What do you hear?"** text box, type the sounds you hear as accurately as you can. Do not worry about using the correct Japanese characters — just write the sounds as you hear them in Rōmaji.
 4. Submit your answer when you are ready.
-
-> **Note:** The listening exercise section is actively under development. Full exercise functionality including scoring and progress updates will be available in a future update.
 
 ---
 
@@ -267,11 +265,11 @@ The **Profile** page lets you manage your account settings and learning progress
 
 1. Click the **profile icon** in the top-right corner of the navigation bar on any page.
 
-   [IMAGE of the navigation bar with the profile icon highlighted, for the purpose of showing users exactly which icon to click]
+   <img height="400" alt="Screenshot 2026-05-03 191625" src="https://github.com/user-attachments/assets/5de4228d-6acd-4b7a-95a7-98555ad091a2" />
 
 2. The **Profile** page opens. It has two tabs: **Account Info** and **Learning Progress**.
 
-   [IMAGE of the Profile page showing the two tabs at the top, for the purpose of orienting users to the tab layout]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/f483481a-354f-47a7-a8c9-5d07f47cca80" />
 
 3. Click a tab to switch between them.
 
@@ -285,7 +283,7 @@ The **Profile** page lets you manage your account settings and learning progress
 4. Click **Update Email**.
 5. A green success message will appear confirming *"Email updated successfully."*
 
-   [IMAGE of the Account Info tab showing the current email card and the New Email form with the "Update Email" button, for the purpose of guiding users through changing their email]
+    <img height="400" alt="image" src="https://github.com/user-attachments/assets/99b19904-ab7e-41fa-9f7c-cc68fcccc2fa" />
 
 ---
 
@@ -299,7 +297,7 @@ The **Profile** page lets you manage your account settings and learning progress
 6. Click **Update Password**.
 7. A green success message will confirm *"Password updated successfully."*
 
-   [IMAGE of the Update Password form showing all three fields and the "Update Password" button, for the purpose of guiding users through the password change process]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/99b19904-ab7e-41fa-9f7c-cc68fcccc2fa" />
 
 ---
 
@@ -310,12 +308,12 @@ If you want to start a module over from the beginning, you can reset your progre
 1. On the **Profile** page, click the **Learning Progress** tab.
 2. You will see two cards: **Kana Progress** and **Listening Progress**.
 
-   [IMAGE of the Learning Progress tab showing both the Kana and Listening reset cards, for the purpose of showing users where the reset buttons are located]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/cb271f74-1dfd-42f0-9b7f-298a8a9510cd" />
 
 3. To reset Kana progress, click **Reset Kana Progress** under the Kana card.
 4. A confirmation pop-up will appear asking *"Reset all kana progress?"* — click **OK** to confirm, or **Cancel** to go back.
 
-   [IMAGE of the browser confirmation dialog asking "Reset all kana progress?", for the purpose of showing users what the confirmation prompt looks like]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/59e943c4-0dfa-475a-9d86-6992b0f18a63" />
 
 5. A success message will appear: *"Kana progress reset."*
 6. Follow the same steps using the **Reset Listening Progress** button to reset Listening progress.
@@ -326,17 +324,15 @@ If you want to start a module over from the beginning, you can reset your progre
 
 ### 7d. Deleting Your Account
 
-> **Warning:** Deleting your account is permanent and cannot be undone. All your data will be removed.
-
 1. On the **Profile** page, select the **Account Info** tab.
 2. Scroll to the bottom of the page.
 3. Click the red **Delete Account** button.
 
-   [IMAGE of the Delete Account button at the bottom of the Account Info tab, for the purpose of showing users where this option is located]
+   <img height="400" alt="Screenshot 2026-05-03 191625" src="https://github.com/user-attachments/assets/6170eee7-3526-4f21-b178-f9784ee93218" />
 
 4. A confirmation pop-up will appear asking *"Are you sure you want to delete your account? This cannot be undone."* Click **OK** to permanently delete your account, or **Cancel** to go back.
 
-   [IMAGE of the browser confirmation dialog for account deletion, for the purpose of showing users the final warning before account deletion]
+   <img height="400" alt="image" src="https://github.com/user-attachments/assets/9fa65498-f46c-4a5d-9d54-1b49af9ca65e" />
 
 5. Your account is deleted and you are returned to the Home page.
 
@@ -348,7 +344,7 @@ To end your session and log out:
 
 1. Click the **Logout** button in the top-right corner of the navigation bar on any page.
 
-   [IMAGE of the navigation bar with the Logout button highlighted, for the purpose of showing users where to click to log out]
+   <img height="400" alt="Screenshot 2026-05-03 202600" src="https://github.com/user-attachments/assets/9d6568d5-2d21-4681-908e-d33fc6204148" />
 
 2. You will be logged out and returned to the **Home** page. The **Start Learning** button will now take you to the Login page instead of directly to the exercise selection screen, confirming you are logged out.
 
